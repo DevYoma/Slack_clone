@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import './App.css';
+import Header from './Components/Header';
 
 
 function App() {
   return (
     <div className="app">
-      <h1>Hello guys, building a Slack Clone</h1>
-
+      <Header />
       {/* Header */}
       {/* Sidebar */}
       {/* React Router ==> chat screen */}
