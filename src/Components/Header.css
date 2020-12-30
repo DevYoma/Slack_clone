@@ -23,6 +23,8 @@
     background: transparent;
     border: none;
     min-width: 30vw;
+    outline-style: none;
+    color: white;
 }
 
 .header__left{
