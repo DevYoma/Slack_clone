@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Sidebar.css';
 import SidebarOption from './SidebarOption';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
@@ -13,8 +13,22 @@ import AppsIcon from '@material-ui/icons/Apps';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
+import db from '../Firebase/Firebase';
 
 const Sidebar = () => {
+    const [channels, setChannels] = useState([]);
+
+    useEffect(() => {
+        //runs this code when the sidebar component loads...
+        db.collection('rooms').onSnapshot(snapshot => (
+            setChannels(snapshot.docs.map(doc => ({
+                //so channels has two values in its object, id and the name 
+                id: doc.id,
+                name: doc.data().name
+            })))
+        ))
+    }, []);
+
     return ( 
         <div className="sidebar">
             <div className="sidebar__header">
@@ -37,11 +51,16 @@ const Sidebar = () => {
                 <SidebarOption Icon={FileCopyIcon} title="Files" />
                 <SidebarOption Icon={ExpandLessIcon} title="ShowLess" />
                 <hr/>
-                <SidebarOption Icon={ExpandMoreIcon} title="ShowMore" />
+                <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
                 <hr/>
                 <SidebarOption Icon={AddIcon} title="Add Channel" />
 
                 {/* Connect to DB and list all the channels */}
+                {/* write code here to show and display things you have saved from firebase */}
+                {channels.map(channel => (
+                    <SidebarOption title={channel.name} id={channel.id} />
+                ))}
+                {/* sidebarOption */}
         </div>
      );
 }
