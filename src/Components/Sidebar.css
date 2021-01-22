@@ -4,6 +4,7 @@
     /* for responsiveness with flex */
     max-width: 260px;
     color: white;
+    flex: 0.3;
 }
 
 .sidebar > hr{
