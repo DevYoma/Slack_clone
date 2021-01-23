@@ -14,9 +14,12 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
 import db from '../Firebase/Firebase';
+import { useStateValue } from '../Context/StateProvider';
 
 const Sidebar = () => {
     const [channels, setChannels] = useState([]);
+    // grabbing data from the data layer
+    const [{user}] = useStateValue();
 
     useEffect(() => {
         //runs this code when the sidebar component loads...
@@ -36,7 +39,7 @@ const Sidebar = () => {
                     <h2>Product Mafia</h2>
                     <h3>
                         <FiberManualRecordIcon />
-                        DevYoma
+                        {user?.displayName}
                     </h3>
                 </div>
                 <CreateIcon />
@@ -53,7 +56,8 @@ const Sidebar = () => {
                 <hr/>
                 <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
                 <hr/>
-                <SidebarOption Icon={AddIcon} title="Add Channel" />
+                {/* passing in the props to handle channel adding */}
+                <SidebarOption Icon={AddIcon} addChannelOption  title="Add Channel" />
 
                 {/* Connect to DB and list all the channels */}
                 {/* write code here to show and display things you have saved from firebase */}
