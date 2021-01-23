@@ -6,6 +6,7 @@ import StarBorderOutlined from '@material-ui/icons/StarBorderOutlined';
 import db from '../Firebase/Firebase';
 import Message from './Message';
 import Image from '../assets/portfolioImage.jpg';
+import ChatInput from './ChatInput';
 
 
 const Chat = () => {
@@ -64,6 +65,12 @@ const Chat = () => {
                     />
                 ))}
             </div>
+
+            {/* CHAT INPUT FIELD */}
+            <ChatInput 
+                channelName={roomDetails?.name}
+                channelId={roomId}
+            />
 
         </div>
      );
