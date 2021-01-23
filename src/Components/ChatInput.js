@@ -22,6 +22,8 @@ const ChatInput = ({ channelName, channelId }) => {
                 userImage: user.photoURL
             })
         }
+
+        setInput("")
         
     }
 
@@ -31,6 +33,7 @@ const ChatInput = ({ channelName, channelId }) => {
             <form>
                 <input 
                     type="text" 
+                    value={input}
                     placeholder={`Message #${channelName?.toLowerCase()}`}
                     onChange={e => setInput(e.target.value)}
                 />
