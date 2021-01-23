@@ -1,7 +1,7 @@
 // INITIAL DATA BELOW
 
 export const initialState = {
-    user: "null",
+    user: null,
 }
 
 // ACTION TYPES(because we dispatch actions through reducers, clean🤔);
