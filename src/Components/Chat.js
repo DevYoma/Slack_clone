@@ -33,7 +33,7 @@ const Chat = () => {
     // why is the dependency in an array format
     
     // console.log(roomDetails)
-    console.log("MESSAGES >>>>>>", roomMessages);
+    // console.log("MESSAGES >>>>>>", roomMessages);
 
     return ( 
         <div className="chat">
