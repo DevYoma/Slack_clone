@@ -61,7 +61,7 @@ const Chat = () => {
                         message={message}
                         timestamp={timestamp}
                         user={user}
-                        userImage={Image}
+                        userImage={userImage}
                     />
                 ))}
             </div>
