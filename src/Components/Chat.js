@@ -5,7 +5,6 @@ import InfoOutlined from '@material-ui/icons/InfoOutlined';
 import StarBorderOutlined from '@material-ui/icons/StarBorderOutlined';
 import db from '../Firebase/Firebase';
 import Message from './Message';
-import Image from '../assets/portfolioImage.jpg';
 import ChatInput from './ChatInput';
 
 
@@ -70,6 +69,7 @@ const Chat = () => {
             <ChatInput 
                 channelName={roomDetails?.name}
                 channelId={roomId}
+                key={roomId}
             />
 
         </div>

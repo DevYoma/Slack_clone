@@ -62,7 +62,7 @@ const Sidebar = () => {
                 {/* Connect to DB and list all the channels */}
                 {/* write code here to show and display things you have saved from firebase */}
                 {channels.map(channel => (
-                    <SidebarOption title={channel.name} id={channel.id} />
+                    <SidebarOption title={channel.name} key={channel.id} id={channel.id} />
                 ))}
                 {/* sidebarOption */}
         </div>
