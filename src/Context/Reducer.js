@@ -12,7 +12,8 @@ export const actionTypes = {
 // state is what the data layer looks like
 // action is what we're trying to do to the data layer, are we setting a user, changing theme, or chasing rats...
 const reducer = (state, action) => {
-    console.log(action);
+    // the code commented below is to see the action
+    // console.log(action);
 
     // now listen to the changes in the data layer using the action.type property as argument in a switch statment
     switch(action.type){
