@@ -31,7 +31,7 @@ const Login = () => {
         <div className="login">
             <div className="login__container">
                 <img src={Slack} alt="slack_logo"/>
-                <h1>Sign in to Yoma</h1>
+                <h1>Sign in to Slack</h1>
                 <p>Lawrenceyoma.netlify.app</p>
                 <Button onClick={signIn}>Sign In with Google</Button>
             </div>

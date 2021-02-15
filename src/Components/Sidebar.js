@@ -36,7 +36,7 @@ const Sidebar = () => {
         <div className="sidebar">
             <div className="sidebar__header">
                 <div className="sidebar__info">
-                    <h2>Product Mafia</h2>
+                    <h2>YOMA SLACK</h2>
                     <h3>
                         <FiberManualRecordIcon />
                         {user?.displayName}
@@ -45,9 +45,9 @@ const Sidebar = () => {
                 <CreateIcon />
             </div>
                 {/* passing an icon as props. */}
-                <SidebarOption Icon={InsertCommentIcon} title="Threads" />
+                {/* <SidebarOption Icon={InsertCommentIcon} title="Threads" />
                 <SidebarOption Icon={InboxIcon} title="Mention & Reactions" />
-                <SidebarOption Icon={DraftsIcon} title="Saved items" />
+                <SidebarOption Icon={DraftsIcon} title="Saved items" /> 
                 <SidebarOption Icon={BookmarkBorderIcon} title="Channel browser" />
                 <SidebarOption Icon={PeopleAltIcon} title="People & user groups" />
                 <SidebarOption Icon={AppsIcon} title="Apps" />
@@ -55,11 +55,11 @@ const Sidebar = () => {
                 <SidebarOption Icon={ExpandLessIcon} title="ShowLess" />
                 <hr/>
                 <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
-                <hr/>
-                {/* passing in the props to handle channel adding */}
+                <hr/> */}
+                 {/* passing in the props to handle channel adding */}
                 <SidebarOption Icon={AddIcon} addChannelOption  title="Add Channel" />
 
-                {/* Connect to DB and list all the channels */}
+                {/* Connect to DB and list all the channels 
                 {/* write code here to show and display things you have saved from firebase */}
                 {channels.map(channel => (
                     <SidebarOption title={channel.name} key={channel.id} id={channel.id} />
