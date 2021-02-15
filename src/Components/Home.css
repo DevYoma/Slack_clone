@@ -1,0 +1,34 @@
+.home{
+    /* background: red; */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;  
+}
+
+.home__header{
+    text-align: center;
+}
+
+.home__header > img{
+    height: 150px;
+    width:150px;
+    object-fit: contain;
+}
+
+.home__p{
+    font-size: 1.4rem;
+}
+
+.home__welcome__p{
+    font-size: 1.1rem;
+}
+
+.home__instructions{
+    margin-top: 15px;
+    padding: 0 20px;
+}
+
+

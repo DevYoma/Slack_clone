@@ -6,6 +6,7 @@ import Chat from './Components/Chat';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Login from './Components/Login';
 import { useStateValue } from './Context/StateProvider';
+import Home from './Components/Home';
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
                   <Chat />
                 </Route>
                 <Route path="/">
-                  <h1>Welcome to the "/" route</h1>
+                  <Home />
                 </Route>
               
               </Switch>
